@@ -63,7 +63,19 @@ public class EjercicioDeber {
         }while(x>0);
                   
         }
-    
+    public static void ejercicio6(){
+        int []n={0,1,0,-1};
+        for(int i=1; i<n.length; i++)
+            if(n[i]==0 && n[i-1]!=0) {
+                int x = n[i-1];
+                n[i-1]=n[i];
+                n[i]=x;
+            }
+        JOptionPane.showMessageDialog(null,"La Respuesta es: "+n[2]);
+            
+              
+        
+    }
     
     
     
@@ -76,7 +88,8 @@ public class EjercicioDeber {
                     + "3.- Ejercicio3\n"
                     + "4.- Ejercicio4\n"
                     + "5.- Ejercicio5\n"
-                    + "6.- Salir"));
+                    + "6.- Ejercicio6\n"
+                    + "7.- Salir"));
             switch(op){
                 case 1:
                     ejercicio1();
@@ -92,11 +105,14 @@ public class EjercicioDeber {
                     break;   
                 case 5:
                     ejercicio5();
-                    break;        
+                    break;  
+                case 6:
+                    ejercicio6();
+                    break;    
             }
             
             
-        }while (op!=6);
+        }while (op!=7);
         
     }
     
